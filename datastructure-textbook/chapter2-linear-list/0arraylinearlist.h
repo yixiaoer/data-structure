@@ -20,10 +20,18 @@ typedef struct
     int listsize;   //当前分配的存储容量(以sizeof(ElemType)为单位)
 } SqList;
 
-#endif
-
 Status InitList_Sq(SqList *L);
+Status DestoryList_Sq(SqList *L);
+Status ClearList_Sq(SqList *L);
+int ListLength_Sq(SqList L);
 Status ListInsert_Sq(SqList *L, int i, ElemType e);
 Status ListDelete_Sq(SqList *L, int i, ElemType *e);
+Status Getelem_Sq(SqList L, int i, ElemType *e);
 int LocateElem_Sq(SqList L, ElemType e, Status (*compare)(ElemType, ElemType));
+Status compare(ElemType ea, ElemType eb);
+Status ListTraverse(SqList L, void(visit)(ElemType));
+void visit(ElemType e);
+void unionList(SqList *La, SqList Lb);
 void MergeList_Sq(SqList La, SqList Lb, SqList *Lc);
+#endif
+
