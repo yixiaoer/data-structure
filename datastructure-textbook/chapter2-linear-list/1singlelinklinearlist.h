@@ -1,6 +1,7 @@
 #ifndef singlelinkinearlist_H_
 #define singlelinklinearlist_H_
-
+#include <stdio.h>
+#include <stdlib.h>
 #define TRUE 1 //预定义常量和类型
 #define FALSE 0
 #define OK 1
@@ -25,8 +26,7 @@ int ListLength_L(LinkList L);
 Status ListInsert_L(LinkList *L, int i, ElemType e);
 Status ListDelete_L(LinkList *L, int i, ElemType *e);
 Status Getelem_L(LinkList L, int i, ElemType *e);
-int LocateElem_L(LinkList L, ElemType e, Status (*compare)(ElemType, ElemType));
-Status compare(ElemType ea, ElemType eb);
-Status ListTraverse(LinkList L, void(visit)(ElemType));
-void visit(ElemType e);
+Status ListTraverse_L(LinkList L);
+void CreatList_L(LinkList *L, int n);
+void MergeList_L(LinkList *La, LinkList *Lb, LinkList *Lc);
 #endif

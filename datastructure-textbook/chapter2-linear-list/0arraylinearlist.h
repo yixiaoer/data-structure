@@ -1,6 +1,7 @@
 #ifndef arraylinearlist_H_
 #define arraylinearlist_H_
-
+#include <stdio.h>
+#include <stdlib.h>
 #define TRUE 1 //预定义常量和类型
 #define FALSE 0
 #define OK 1
@@ -34,4 +35,3 @@ void visit(ElemType e);
 void unionList(SqList *La, SqList Lb);
 void MergeList_Sq(SqList La, SqList Lb, SqList *Lc);
 #endif
-
