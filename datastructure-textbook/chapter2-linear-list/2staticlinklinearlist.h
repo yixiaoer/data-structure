@@ -18,5 +18,11 @@ typedef struct
     int cur; //cur是游标，用同指针
 } component, SLinkList[MAXSIZE];
 
-int InitSpace_SL(SLinkList *space);
+Status InitSpace_SL(SLinkList *S);
+int Malloc_SL(SLinkList *space);
+void Free_SL(SLinkList *space, int k);
+int ListLength_SL(SLinkList S);
+Status ListInsert_SL(SLinkList *S, int i, ElemType e);
+Status ListDelete_SL(SLinkList *S, int i, ElemType *e);
+Status Getelem_SL(SLinkList S, int i, ElemType *e);
 #endif
